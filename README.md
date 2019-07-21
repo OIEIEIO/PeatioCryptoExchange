@@ -1,13 +1,15 @@
-Peatio : The open-source crypto currency exchange [Under Development For Version 2.0]
-=====================================
-![Bitcoin](https://appspicket.com/wp-content/uploads/2017/07/coins-2.png)
+PEATIO v2.0 - An open-source crypto currency exchange
+====================================================
+https://blog.algobasket.com/2019/05/build-your-own-cryptocurrency-exchange.html
 
 Peatio is a free and open-source crypto currency exchange implementation with the Rails framework and other cutting-edge technology.
 
 
 ### Mission
 
-Our mission is to build the world best open-source crypto currency exchange with a high performance trading engine and safety which can be trusted and enjoyed by users.Help is greatly appreciated, feel free to submit pull-requests or open issues.
+Our mission is to build the world best open-source crypto currency exchange with a high performance trading engine and safety which can be trusted and enjoyed by users. Additionally we want to move the crypto currency exchange technology forward by providing support and add new features. We are helping people to build easy their own exchange around the world.
+
+Help is greatly appreciated, feel free to submit pull-requests or open issues.
 
 
 ### Things You Should Know ###
@@ -17,6 +19,10 @@ RUNNING AN EXCHANGE IS HARD.
 Peatio makes it easier, but running an exchange is still harder than a blog, which you can download the source code and following the guide or even a cool installer and boom!!! a fancy site is there to profit. We always prioritize security and speed higher than 1-click setup. We split Peatio to many components (processes) so it's flexible to deploy and scalable.
 
 SECURITY KNOWLEDGE IS A REQUIREMENT.
+
+Peatio cannot protect your customers when you leave your admin password 1234567, or open sensitive ports to public internet. No one can. Running an exchange is a very risky task because you're dealing with money directly. If you don't known how to make your exchange secure, hire an expert.
+
+You must know what you're doing, there's no shortcut. Please get prepared before continue:
 
 * Rails knowledge
 * Security knowledge
@@ -57,7 +63,7 @@ SECURITY KNOWLEDGE IS A REQUIREMENT.
 ### Requirements
 
 * Linux / Mac OSX
-* Ruby 2.2.2
+* Ruby 2.2.7
 * Rails 4.0+
 * Git 1.7.10+
 * Redis 2.0+
@@ -67,23 +73,12 @@ SECURITY KNOWLEDGE IS A REQUIREMENT.
 ** More details are in the [doc](doc).
 
 
-### Getting Quick start using Installer
+### Getting started
 
-  * Use peatio-fresh-installer.sh file to install on fresh server
-
-  * Use peatio-repair-installer.sh file to repair/delete/old and then install
-
-  * Use peatio-installer-vagrant.sh file to install via vagrant (Linux + Windows + MacOX)
-
-  * To install manually please follow the docs
-
-### Getting Manual start
-
-* [Setup on Mac OS X](https://github.com/algobasket/PeatioCryptoExchange/blob/rebuild-peatio/doc/setup-local-osx.md)
-* [Setup on Ubuntu](https://github.com/algobasket/PeatioCryptoExchange/blob/rebuild-peatio/doc/setup-local-ubuntu.md)
-* [Deploy production server](https://github.com/algobasket/PeatioCryptoExchange/blob/rebuild-peatio/doc/deploy-production-server.md)
-* [Setup Ethereum Server](https://github.com/algobasket/PeatioCryptoExchange/blob/rebuild-peatio/doc/eth.md)
-
+* [Setup on Mac OS X](doc/setup-local-osx.md)
+* [Setup on Ubuntu](doc/setup-local-ubuntu.md)
+* [Deploy production server](doc/deploy-production-server.md)
+* [Setup Ethereum Server](doc/eth.md)
 ### API
 
 You can interact with Peatio through API:
@@ -112,6 +107,16 @@ Peatio front-end based Bootstrap 3.0 version and Sass, and you can custom exchan
 `vars/_custom.css.scss` can overwrite `vars/_basic.css.scss` defined variables
 `layout/_custom.css.scss` can overwrite `layout/_basic.css.scss` and `layoputs/_header.css.scss` style
 
+### Getting Involved
+
+Want to report a bug, request a feature, contribute or translate Peatio?
+
+* Browse our [issues](https://github.com/peatio/peatio/issues), comment on proposals, report bugs.
+* Clone the peatio repo, make some changes according to our development guidelines and issue a pull-request with your changes.
+* Anything you want to tell us please send it to [community@peatio.com](mailto:me@muhnagy.com)
+* If you need technical support or customization service, contact us: [sales@peatio.com](mailto:me@muhnagy.com)
+
+
 ### License
 
 Peatio is released under the terms of the MIT license. See [http://peatio.mit-license.org](http://peatio.mit-license.org) for more information.
@@ -119,8 +124,19 @@ Peatio is released under the terms of the MIT license. See [http://peatio.mit-li
 
 ### DONATE
 
-**Bitcoin** address [36uSLDtaiBaRrQxgRdC3qdtevLhANBHfd6](https://blockchain.info/address/36uSLDtaiBaRrQxgRdC3qdtevLhANBHfd6)
-**Paypal** [https://paypal.me/algobasket](https://paypal.me/algobasket)
+**Every donation will help me to maintain updates and add new features and functionalities**
 
-# SKYPE : algobasket
-# EMAIL : algobasket@gmail.com
+**Bitcoin** address [18dr92LBJsnEihqv85zgQfQD5oqr2HcR4f](https://blockchain.info/address/18dr92LBJsnEihqv85zgQfQD5oqr2HcR4f)
+
+**Ethereum** address [0xE0adAeD68598bFD1Fa66326FDfb9e8137Bc47815](https://www.blockchain.com/eth/address/0xE0adAeD68598bFD1Fa66326FDfb9e8137Bc47815)
+
+**Bitcoin Cash** address [qz6qn7cyvxehrl5pfmgwkf0ql3garnlc5yqr6nv0n7](https://www.blockchain.com/bch/address/qz6qn7cyvxehrl5pfmgwkf0ql3garnlc5yqr6nv0n7)
+
+
+### What is Peatio?
+
+[Peatio](https://blog.algobasket.com/2019/05/build-your-own-cryptocurrency-exchange.html) (Chinese: 貔貅) is a Chinese mythical hybrid creature considered to be a very powerful protector to practitioners of Feng Shui.
+
+
+
+

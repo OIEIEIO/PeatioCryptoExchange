@@ -47,7 +47,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem "jquery-rails"
 gem "angularjs-rails"
-gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'bootstrap-sass', '~> 3.2.0.4'
 gem 'bootstrap-wysihtml5-rails'
 gem 'font-awesome-sass'
 gem 'bourbon'
@@ -68,7 +68,6 @@ gem 'unread', github: 'InfraexDev/unread'
 gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
-gem 'guard-livereload', '~> 2.5'
 
 group :development, :test do
   gem 'factory_girl_rails'

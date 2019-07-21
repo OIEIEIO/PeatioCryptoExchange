@@ -27,7 +27,7 @@ Peatio::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -58,11 +58,10 @@ Peatio::Application.configure do
   config.session_store :redis_store, :key => '_peatio_session', :expire_after => ENV['SESSION_EXPIRE'].to_i.minutes
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = "http://localhost:8005/"
+  # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile = ['.js', '.css', '*.css.erb','*.png']   
   config.assets.precompile += %w( funds.js market.js market.css admin.js admin.css html5.js api_v2.css api_v2.js .svg .eot .woff .ttf )
 
   # Ignore bad email addresses and do not raise email delivery errors.

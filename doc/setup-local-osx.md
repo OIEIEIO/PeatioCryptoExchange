@@ -28,8 +28,8 @@ Add rbenv to bash so that it loads every time you open a terminal
 
 Install Ruby and set it as the default version
 
-    rbenv install 2.2.1
-    rbenv global 2.2.1
+    rbenv install -v 2.2.7
+    rbenv global 2.2.7
 
     ruby -v
 
@@ -107,8 +107,10 @@ Peatio uses Capybara with PhantomJS to do the feature tests, so if you want to r
 
 **Clone the project**
 
-    git clone git://github.com/InfraexDev/peatio.git
+    mkdir -p ~/peatio
     cd peatio
+    git clone https://algobasket@bitbucket.org/AlgoBasketTeam2018/peatio2.0.git .
+
     bundle install
 
 **Prepare configure files**
@@ -164,5 +166,6 @@ When daemons don't work, check `log/#{daemon name}.rb.output` or `log/peatio:amq
 
 **Visit [http://localhost:3000](http://localhost:3000)**
 
-    user: admin@peatio.dev
-    pass: Pass@word8
+    # user: admin@peatio.info
+
+    # pass: Pass@word8

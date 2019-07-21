@@ -40,13 +40,13 @@ Installing [rbenv](https://github.com/sstephenson/rbenv) using a Installer
 
 Install Ruby through rbenv:
 
-    rbenv install 2.3.0
-    rbenv global 2.3.0
+    rbenv install -v 2.2.7
+    rbenv global 2.2.7
 
 Install bundler
 
     echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-    gem install bundler
+    gem install bundler -v 1.9.2
     rbenv rehash
 
 ### Step 2: Install MySQL
@@ -139,8 +139,10 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
 
 **Clone the project**
 
-    git clone git@github.com:InfraexDev/peatio.git
+    mkdir -p ~/peatio
     cd peatio
+    git clone https://algobasket@bitbucket.org/AlgoBasketTeam2018/peatio2.0.git .
+
     bundle install
 
 **Prepare configure files**
@@ -200,5 +202,6 @@ When daemons don't work, check `log/#{daemon name}.rb.output` or `log/peatio:amq
 
 **Visit [http://localhost:3000](http://localhost:3000)**
 
-    user: admin@peatio.dev
-    pass: Pass@word8
+    # user: admin@peatio.info
+    
+    # pass: algobasket

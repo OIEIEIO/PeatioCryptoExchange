@@ -1,5 +1,5 @@
 #!/bin/bash
-# Peatio-repair-installer.sh: Crypto Currency Exchange
+# Peatio-installer-using-vagrant.sh: Crypto Currency Exchange
 # Author: AlgoBasket
 # Skype algobasket
 # Email algobasket@gmail.com
@@ -10,129 +10,11 @@
 #
 #  Script by Algobasket.
 ################################################################
-sudo apt install -y ffmpeg
-sudo apt install -y mplayer
-sudo apt-get update
-#mplayer https://techibeats.files.wordpress.com/2011/12/sandstorm.mp3  > /dev/null 2>&1;
-mplayer -noconsolecontrols -really-quiet 2>/dev/null https://techibeats.files.wordpress.com/2011/12/sandstorm.mp3 &
-
-sudo apt-get -y install boxes;
-sudo apt-get update
-echo 'WELCOME TO PEATIO CRYPTOCURRENCY EXCHANGE v1.0 (Repair Installer) - DEVELOPED BY ALGOBASKET' | boxes -d diamonds -a hcvc
-echo -e "\n\n"
-echo -e "\033[34;7mWelcome to Peatio Crypto Exchange v1.0 - Build by Algobasket\e[0m "
-echo -e "\n\n"
-
-echo -e "\033[33;7mRemoving all previous version and dependencies if any...\e[0m"
-echo -e "\033[35;7mRemoving Lock Files\e[0m"
-sudo rm /var/lib/apt/lists/lock
-sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
-sudo apt-get update
-echo -e "\n\n"
-echo -e "\033[34;7m- uninstalling nginx ..\e[0m"
-sudo service nginx stop
-sudo apt-get purge nginx*;
-sudo apt-get purge nginx;
-sudo apt-get update
-sudo apt-get remove nginx*;
-sudo apt-get remove nginx;
-sudo apt-get autoremove
-sudo apt-get clean
-sudo apt-get purge nginx-extras*;
-sudo apt-get purge nginx-extras;
-sudo apt-get update
-sudo apt-get remove nginx-extras*;
-sudo apt-get remove nginx-extras;
-sudo apt-get autoremove
-sudo apt-get clean
-
-
-
-echo -e "\n\n"
-echo -e "\033[34;7m- uninstalling passenger ..\e[0m"
-sudo apt-get purge passenger*;
-sudo apt-get purge passenger;
-sudo apt-get remove passenger*;
-sudo apt-get remove passenger;
-sudo apt-get autoremove
-sudo apt-get clean
-
-
-echo -e "\n\n"
-echo -e "\033[34;7m- uninstalling Ruby ..\e[0m"
-sudo apt-get purge ruby*
-
-echo -e "\n\n"
-echo -e "\033[34;7m- uninstalling MYSQL  ..\e[0m"
-
-sudo apt-get remove --purge mysql-server mysql-client mysql-common -y
-sudo apt-get autoremove -y
-sudo apt-get autoclean
-rm -rf /etc/mysql
-sudo find / -iname 'mysql*' -exec rm -rf {} \;
-echo -e "\n\n"
-echo -e "\033[34;7m- uninstalling REDIS  ..\e[0m"
-
-sudo systemctl stop redis
-sudo systemctl disable redis
-cd redis-stable
-sudo make uninstall
-sudo deluser redis
-
-echo -e "\n\n"
-echo -e "\033[34;7m- uninstalling Rabbitmq-server  ..\e[0m"
-sudo -u rabbitmq rabbitmqctl stop
-sudo apt-get remove rabbitmq-server
-sudo apt-get remove --auto-remove rabbitmq-server
-sudo apt-get purge rabbitmq-server
-sudo apt-get purge --auto-remove rabbitmq-server
-sudo apt-get autoremove
-sudo apt-get clean
-
-echo -e "\n\n"
-echo -e "\033[34;7mUpdating and Upgrading the system\e[0m"
-
-echo -e "\n\n"
-echo -e "\033[35;7mRemoving Lock Files\e[0m"
-sudo rm /var/lib/apt/lists/lock
-sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
-
-echo -e "\n\n"
-echo -e "\033[35;7mRemoving ruby environment\e[0m"
-
-rm -rf ~/.rbenv
-cd
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get -y install git-core curl zlib1g-dev build-essential \
-                     libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 \
-                     libxml2-dev libxslt1-dev libcurl4-openssl-dev \
-                     python-software-properties libffi-dev
-
-echo -e "\n\n"
-echo -e "\033[34;7mInstalling Ruby Environment\e[0m"
-
-cd
-git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-
-echo -e "\n\n"
-echo -e "\033[34;7mInstalling Ruby Build\e[0m"
-
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-
-
-rbenv install --verbose 2.2.2
-rbenv global 2.2.2
 
 echo -e "\n\n"
 echo -e "\033[34;7mInstalling Gem\e[0m"
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-gem install bundler
+gem install bundler -v 1.9.2
 rbenv rehash
 
 echo -e "\n\n"
@@ -240,8 +122,9 @@ echo -e "\n\n"
 echo -e "\033[34;7mCloning Stable Peatio Repo\e[0m"
 
 mkdir -p ~/peatio
-git clone https://github.com/algobasket/PeatioCryptoExchange.git .
 cd peatio
+git clone https://github.com/algobasket/PeatioCryptoExchange.git .
+
 
 echo -e "\n\n"
 echo -e "\033[34;7mInstalling dependency gems\e[0m"
